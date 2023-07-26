@@ -8,7 +8,7 @@ DATASET_LINK = 'https://archive.ics.uci.edu/static/public/547/algerian+forest+fi
 DATASET_ZIP_FILENAME = 'Algerian-Forest-Fires-dataset.zip'
 DATASET_ZIP_PATH = os.path.dirname(inspect.getfile(inspect.currentframe()))
 DATASET_PATH = os.path.join(os.path.dirname(DATASET_ZIP_PATH), 'raw')
-DATASET_FILENAME = 'Algerian_Forest_Fires_dataset.csv'
+# DATASET_FILENAME = 'Algerian_Forest_Fires_dataset.csv'
 
 def download_data(URL: str, ) -> R.Response:
     '''Downloads data from given url.'''

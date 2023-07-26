@@ -1,12 +1,14 @@
-import datetime
-import time
 import os
-import pandas as pd
 
 
 DATASET_LINK = 'https://archive.ics.uci.edu/static/public/547/algerian+forest+fires+dataset.zip'
 DATASET_PATH = os.path.join('Artifacts', 'algerian_forest_fire.dat')
 COLUMN_NAME = ['date', 'temp', 'RH', 'WS', 'Rain', 'FFMC', 'DMC', 'DC', 'ISI', 'BUI', 'FWI', 'Classes']
+TARGET_COLUMN = 'Classes'
+DROP_COLUMNS = ['year']
+PREPROCESSOR_PATH = os.path.join('artifacts', 'preprocessor.joblib')
+MODEL_PATH = os.path.join('artifacts', 'model.joblib')
+
 COLUMN_DESCRIPTION = '''
 1. Date : (DD/MM/YYYY) Day, month ('june' to 'september'), year (2012)
 
@@ -34,5 +36,5 @@ FWI Components
 
 11. Fire Weather Index (FWI) Index: 0 to 31.1
 
-12. Classes: two classes, namely fireù and not fireù
+12. Classes: two classes, namely fire and not fire
 '''
